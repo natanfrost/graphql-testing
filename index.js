@@ -21,6 +21,9 @@ const resolvers = {
         },
         id() {
             return 123465789;
+        },
+        tecnologias() {
+            return ['GraphQL', 'ReactJS', 'NestJS'];
         }
     }
 }
@@ -31,7 +34,8 @@ const typeDefs = gql`
         salario: Float
         nome: String
         ativo: Boolean
-        id: ID
+        id: ID,
+        tecnologias: [String!]!
     }
 `
 
