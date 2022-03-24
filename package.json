@@ -1,0 +1,19 @@
+{
+  "name": "graphqlmodel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "apollo-server": "^3.6.5",
+    "graphql": "^16.3.0"
+  }
+}
