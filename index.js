@@ -44,6 +44,16 @@ const resolvers = {
         },
         produtos() {
             return produtos;
+        },
+        produto(_, args){
+            return produtos.find(produto => produto.nome.toUpperCase().includes(args.nome.toUpperCase())) || {};
+        },
+        usuario(_, args) {
+            const { id, nome } = args;
+            if (id) {
+                return usuarios.find(usuario => usuario.id === id) || {};
+            }
+            return usuarios.find(usuario => usuario.nome === nome) || {};
         }
     }
 }
@@ -69,6 +79,8 @@ const typeDefs = gql`
     type Query {
         usuarios: [Usuario]   
         produtos: [Produto]    
+        usuario(id: Int, nome: String): Usuario
+        produto(nome: String): Produto
     }
 `
 
