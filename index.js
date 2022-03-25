@@ -82,6 +82,11 @@ const resolvers = {
 
 const typeDefs = gql`
 
+    enum TipoPerfil {
+        ADMIN
+        NORMAL
+    }
+
     type Produto {
         id: ID
         nome: String
@@ -91,7 +96,7 @@ const typeDefs = gql`
 
     type Perfil {
         id: Int
-        descricao: String
+        descricao: TipoPerfil
     }
 
     type Usuario {
